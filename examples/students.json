@@ -1,0 +1,1 @@
+{"sessions":{"Monday":1,"Tuesday":1,"Wednesday":0},"students":[{"id":"Alex","available":["Monday","Tuesday"],"preferences":["Monday","Tuesday"]},{"id":"Blair","available":["Monday"],"preferences":["Monday"]},{"id":"Casey","available":["Wednesday"],"preferences":["Wednesday"]},{"id":"Drew","available":[],"preferences":[]}]}

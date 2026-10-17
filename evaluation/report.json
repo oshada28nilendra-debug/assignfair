@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "objective": "maximize assigned count, then minimize sum of zero-based preference ranks",
+  "optimized": {
+    "method": "min_cost_max_flow",
+    "assigned": 2,
+    "unassigned": 2,
+    "preference_cost": 1,
+    "assignments": [
+      {
+        "student": "Alex",
+        "session": "Tuesday",
+        "preference_cost": 1
+      },
+      {
+        "student": "Blair",
+        "session": "Monday",
+        "preference_cost": 0
+      },
+      {
+        "student": "Casey",
+        "session": null,
+        "preference_cost": null
+      },
+      {
+        "student": "Drew",
+        "session": null,
+        "preference_cost": null
+      }
+    ],
+    "unmet_demand": [
+      {
+        "student": "Casey",
+        "reason": "all_available_sessions_have_zero_capacity",
+        "available": [
+          "Wednesday"
+        ]
+      },
+      {
+        "student": "Drew",
+        "reason": "no_available_session",
+        "available": []
+      }
+    ],
+    "sessions": [
+      {
+        "session": "Monday",
+        "capacity": 1,
+        "used": 1
+      },
+      {
+        "session": "Tuesday",
+        "capacity": 1,
+        "used": 1
+      },
+      {
+        "session": "Wednesday",
+        "capacity": 0,
+        "used": 0
+      }
+    ]
+  },
+  "greedy": {
+    "method": "greedy_input_order",
+    "assigned": 1,
+    "unassigned": 3,
+    "preference_cost": 0,
+    "assignments": [
+      {
+        "student": "Alex",
+        "session": "Monday",
+        "preference_cost": 0
+      },
+      {
+        "student": "Blair",
+        "session": null,
+        "preference_cost": null
+      },
+      {
+        "student": "Casey",
+        "session": null,
+        "preference_cost": null
+      },
+      {
+        "student": "Drew",
+        "session": null,
+        "preference_cost": null
+      }
+    ],
+    "unmet_demand": [
+      {
+        "student": "Blair",
+        "reason": "capacity_competition",
+        "available": [
+          "Monday"
+        ]
+      },
+      {
+        "student": "Casey",
+        "reason": "all_available_sessions_have_zero_capacity",
+        "available": [
+          "Wednesday"
+        ]
+      },
+      {
+        "student": "Drew",
+        "reason": "no_available_session",
+        "available": []
+      }
+    ],
+    "sessions": [
+      {
+        "session": "Monday",
+        "capacity": 1,
+        "used": 1
+      },
+      {
+        "session": "Tuesday",
+        "capacity": 1,
+        "used": 0
+      },
+      {
+        "session": "Wednesday",
+        "capacity": 0,
+        "used": 0
+      }
+    ]
+  },
+  "comparison": {
+    "additional_assignments": 1,
+    "preference_cost_reduction_at_equal_count": null
+  }
+}
